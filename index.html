@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>송류근 | Ryu Kun Song</title>
+<meta name="description" content="송류근 (Ryu Kun Song) — 연세대학교 일반대학원 보건학과 박사과정 (의료경영정보 전공). 관심 분야: 의료이용, 보건의료 데이터.">
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+:root{
+  --bg:#ffffff; --fg:#1d2330; --muted:#5d6675; --line:#e6e8ec;
+  --accent:#1f4e8c; --accent-soft:#eef3fa; --card:#fafbfc;
+}
+@media (prefers-color-scheme: dark){
+  :root{ --bg:#14171c; --fg:#e7e9ee; --muted:#9aa3b2; --line:#2a2f38; --accent:#7fb0ef; --accent-soft:#1b2533; --card:#191d23; }
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--fg);
+  font-family:"Pretendard",-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased;word-break:keep-all}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+header.nav{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 92%,transparent);
+  backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+.nav-in{max-width:880px;margin:0 auto;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;gap:16px}
+.brand{font-weight:700;color:var(--fg)}
+.nav-links{display:flex;gap:18px;flex-wrap:wrap;font-size:14px}
+.nav-links a{color:var(--muted)}
+.nav-links a:hover{color:var(--accent);text-decoration:none}
+main{max-width:880px;margin:0 auto;padding:0 20px 80px}
+.hero{display:flex;gap:40px;align-items:center;padding:56px 0 40px;border-bottom:1px solid var(--line)}
+.hero-text{flex:1}
+.eyebrow{color:var(--muted);font-size:14px;margin:0 0 6px}
+h1{font-size:34px;line-height:1.25;margin:0 0 4px;letter-spacing:-.02em}
+.en{color:var(--muted);font-weight:500;font-size:18px;margin:0 0 18px}
+.affil{margin:0 0 14px}
+.intro{color:var(--fg);margin:0 0 20px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 20px;padding:0;list-style:none}
+.tags li{background:var(--accent-soft);color:var(--accent);font-size:13px;padding:4px 10px;border-radius:999px}
+.links{display:flex;gap:16px;flex-wrap:wrap;font-size:15px}
+.photo{width:180px;flex:none}
+.photo img{width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;border-radius:10px;display:block;border:1px solid var(--line)}
+section{padding:40px 0 8px}
+h2{font-size:21px;margin:0 0 20px;padding-bottom:8px;border-bottom:2px solid var(--fg);letter-spacing:-.01em}
+.row{display:grid;grid-template-columns:150px 1fr;gap:16px;padding:12px 0;border-bottom:1px solid var(--line)}
+.row:last-child{border-bottom:0}
+.when{color:var(--muted);font-size:14px;font-variant-numeric:tabular-nums;padding-top:2px}
+.what b{font-weight:650}
+.sub{color:var(--muted);font-size:14.5px;margin-top:2px}
+.pub{padding:4px 0 8px}
+.pub .title{font-weight:650;font-size:17px;line-height:1.5}
+.pub .ko{color:var(--muted);font-size:15px;margin-top:2px}
+.pub .authors{margin-top:8px;font-size:15px}
+.pub .venue{font-size:15px;color:var(--muted)}
+.badges{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}
+.badge{font-size:13px;border:1px solid var(--line);border-radius:6px;padding:3px 10px;color:var(--fg)}
+a.badge:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+.summary{margin-top:12px;font-size:15px;color:var(--muted);background:var(--card);border-left:3px solid var(--accent);padding:10px 14px;border-radius:0 6px 6px 0}
+.project{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--card)}
+.project-shots{display:grid;grid-template-columns:1fr 1.6fr;gap:1px;background:var(--line)}
+.project-shots figure{margin:0;background:#f7f8fa;display:flex;align-items:center;justify-content:center;padding:14px}
+.project-shots img{max-width:100%;max-height:300px;display:block;border-radius:6px;box-shadow:0 1px 4px rgba(0,0,0,.08)}
+.project-body{padding:20px 22px}
+.project-body h3{margin:0 0 4px;font-size:18px}
+.project-body ul{margin:10px 0 0;padding-left:18px}
+.project-body li{margin:3px 0}
+.stack{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+.stack span{font-size:12.5px;font-family:ui-monospace,SFMono-Regular,Consolas,monospace;background:var(--accent-soft);color:var(--accent);padding:2px 8px;border-radius:4px}
+footer{max-width:880px;margin:0 auto;padding:24px 20px 40px;color:var(--muted);font-size:13px;border-top:1px solid var(--line)}
+@media (max-width:640px){
+  .nav-links{display:none}
+  .hero{flex-direction:column-reverse;align-items:flex-start;gap:24px;padding-top:36px}
+  .photo{width:130px}
+  h1{font-size:28px}
+  .row{grid-template-columns:1fr;gap:2px}
+  .project-shots{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<header class="nav">
+  <div class="nav-in">
+    <a class="brand" href="#top">송류근</a>
+    <nav class="nav-links">
+      <a href="#education">학력</a>
+      <a href="#publications">논문</a>
+      <a href="#research">연구</a>
+      <a href="#experience">경력</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="hero-text">
+      <h1>송류근</h1>
+      <p class="en">Ryu Kun Song</p>
+      <p class="affil">연세대학교 일반대학원 보건학과 박사과정<br><span class="sub">의료경영정보 전공 · Yonsei University</span></p>
+      <p class="intro">병원 행정 실무 경험을 바탕으로 의료이용 및 보건의료 데이터에 관심을 두고 연구를 배워 가고 있습니다.</p>
+      <ul class="tags">
+        <li>의료이용</li><li>보건의료 데이터</li>
+      </ul>
+      <div class="links">
+        <a href="mailto:thdfbrms@naver.com">✉ thdfbrms@naver.com</a>
+        <a href="https://doi.org/10.4332/KJHPA.2025.35.2.187" target="_blank" rel="noopener">대표 논문 ↗</a>
+      </div>
+    </div>
+    <div class="photo"><img src="assets/profile.jpg" alt="송류근 프로필 사진" width="360" height="480"></div>
+  </div>
+
+  <section id="education">
+    <h2>학력 <span class="sub">Education</span></h2>
+    <div class="row"><div class="when">2025.09 – 현재</div><div class="what"><b>연세대학교 일반대학원</b> · 보건학 박사과정<div class="sub">의료경영정보학 전공</div></div></div>
+    <div class="row"><div class="when">2022.09 – 2025.02</div><div class="what"><b>연세대학교 보건대학원</b> · 보건학 석사<div class="sub">의료경영학 전공</div></div></div>
+    <div class="row"><div class="when">2011.03 – 2015.02</div><div class="what"><b>차의과학대학교</b> · 보건행정학 학사</div></div>
+  </section>
+
+  <section id="publications">
+    <h2>논문 <span class="sub">Publications</span></h2>
+    <div class="pub">
+      <div class="title">A Cross-Sectional Study on Health Literacy and Self-Rated Health: Focusing on the Presence of Chronic Diseases</div>
+      <div class="ko">헬스 리터러시와 주관적 건강상태에 관한 단면 연구: 만성질환 유병 여부를 중심으로</div>
+      <div class="authors"><b><u>Ryu Kun Song</u></b>, Jin Wook Lee, Bomgyeol Kim, Suk-Yong Jang, Sang Gyu Lee, Tae Hyun Kim</div>
+      <div class="venue"><i>Health Policy and Management</i> (보건행정학회지), 2025; 35(2): 187–197 · 제1저자</div>
+      <div class="badges">
+        <a class="badge" href="https://doi.org/10.4332/KJHPA.2025.35.2.187" target="_blank" rel="noopener">DOI: 10.4332/KJHPA.2025.35.2.187 ↗</a>
+        <span class="badge">석사학위논문 기반</span>
+      </div>
+      <div class="summary">한국의료패널 2021 헬스 리터러시 부가조사 자료(성인 9,952명)로 헬스 리터러시와 주관적 건강상태의 연관성을 다중 로지스틱 회귀분석으로 살펴보았습니다. 헬스 리터러시가 적절한 집단일수록 주관적 건강상태를 좋게 보고할 가능성이 높았고, 이 연관성은 만성질환 유무에 따라 달랐으며 특히 고혈압과 당뇨병 환자에서 두드러졌습니다.</div>
+    </div>
+  </section>
+
+  <section id="research">
+    <h2>연구 경험 <span class="sub">Research Experience</span></h2>
+    <div class="row"><div class="when">2025</div><div class="what"><b>외래서비스 이용 경험과 만족도: 만성질환 유병 여부에 따른 반복횡단면 연구</b><div class="sub">연세대학교 대학원 총학생회 2025-2 학술지원 프로그램 장려상 수상작</div></div></div>
+    <div class="row"><div class="when">2026</div><div class="what"><b>산재 근로자의 비급여 의료비 부담이 의료기관 이용수준 변화에 미치는 영향</b><div class="sub">근로복지공단 제11회 산재보험패널 학술대회 대학원생 학술논문 경진대회 장려상 수상작</div></div></div>
+
+    <h3 style="font-size:17px;margin:32px 0 14px">프로젝트 <span class="sub">Project</span></h3>
+    <div class="project">
+      <div class="project-shots">
+        <figure><img src="assets/bc-form.png" alt="유방암 집계정보 시각화 앱의 지표 선택 화면" loading="lazy"></figure>
+        <figure><img src="assets/bc-result.png" alt="유방암 환자수 현황 조회 결과: 요약 카드와 연도별 환자수, 성별 분포 차트" loading="lazy"></figure>
+      </div>
+      <div class="project-body">
+        <h3>유방암 집계정보 시각화 웹앱</h3>
+        <div class="sub">보건학데이터사이언스 수업 기말 프로젝트 · 2026년 1학기</div>
+        <ul>
+          <li>국립암센터의 「유방암 집계정보 조회서비스」 공공데이터 OpenAPI를 연동해, 21개 집계지표(환자수, 진단·검사, BRCA1/2 유전자검사, 면역병리, 수술, 항암·호르몬·방사선치료, 약제처방)를 조회할 수 있게 만들었습니다.</li>
+          <li>센터별·연도별·연령대별·성별 현황을 요약 카드, 차트 4종, 상세 테이블로 보여주는 Flask 웹앱을 구현했습니다.</li>
+          <li>공식 문서와 실제 API 동작의 차이를 직접 호출해 확인했고, 페이지네이션과 타임아웃 처리 방식을 사용설명서로 정리했습니다.</li>
+        </ul>
+        <div class="stack"><span>Python</span><span>Flask</span><span>pandas</span><span>matplotlib</span><span>seaborn</span><span>OpenAPI</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2>경력 <span class="sub">Work Experience</span></h2>
+    <div class="row"><div class="when">2023.12 – 2024.02</div><div class="what"><b>용인세브란스병원</b> · 기획예산팀<div class="sub">일반직 인력 정원 검토</div></div></div>
+    <div class="row"><div class="when">2022.04 – 2023.03</div><div class="what"><b>가톨릭중앙의료원</b> · 기획예산팀<div class="sub">월간·주간 정례보고(산하 병원 지표 비교), 부서 MBO, 일반기획</div></div></div>
+    <div class="row"><div class="when">2020.07 – 2022.03</div><div class="what"><b>삼성서울병원</b> · 사회복지공헌파트<div class="sub">발달장애인, 난민 등 지역사회 취약계층을 위한 사회공헌 프로그램 기획</div></div></div>
+    <div class="row"><div class="when">2016.03 – 2018.02</div><div class="what"><b>분당서울대학교병원</b> · 진료지원센터<div class="sub">진료부 지표관리, ‘실시간 지표 모니터링 시스템’ 기획 참여</div></div></div>
+    <div class="row"><div class="when">2014.09 – 2015.09</div><div class="what"><b>세브란스병원 안이비인후과병원</b> · 경영지원팀<div class="sub">외래 원무, 수납</div></div></div>
+  </section>
+
+
+  <section id="certifications">
+    <h2>자격증 <span class="sub">Certifications</span></h2>
+    <div class="row"><div class="when">2014.08.22</div><div class="what"><b>정보처리기사</b> (국가기술자격)<div class="sub">한국산업인력공단</div></div></div>
+  </section>
+
+</main>
+
+<footer>© 2026 송류근 (Ryu Kun Song) · 최종 업데이트 2026.10</footer>
+</body>
+</html>
